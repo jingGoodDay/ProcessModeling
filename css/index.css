@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'iconfont';
+  /* project id 524218 */
+  src: url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.eot");
+  src: url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.woff") format("woff"), url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.ttf") format("truetype"), url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.svg#iconfont") format("svg"); }
+html {
+  height: 100%; }
+  html body {
+    background: #f7f7f7;
+    height: 100%;
+    width: 100%; }
+    html body header .navbar {
+      background-color: #ff6b6b; }
+      html body header .navbar .navbar-brand {
+        color: #ffffff;
+        font-size: 22px; }
+      html body header .navbar .navbar-brand:hover {
+        color: #ffffff;
+        cursor: default; }
+      html body header .navbar .navbar-nav li a {
+        color: #ffffff; }
+      html body header .navbar .navbar-nav li a.dropdown-toggle {
+        line-height: 18px; }
+      html body header .navbar .navbar-nav li .dropdown-menu a {
+        color: #000; }
+        html body header .navbar .navbar-nav li .dropdown-menu a .iconfont {
+          font-size: 14px;
+          color: #000;
+          margin-right: 6px; }
+      html body header .navbar .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: normal;
+        color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale; }
+    html body content {
+      height: calc(100% - 52px); }
+      html body content .left-part {
+        position: relative;
+        top: -20px;
+        height: calc(100% - 52px);
+        width: 240px;
+        border-right: 2px solid #ebeff2;
+        padding: 0; }
+        html body content .left-part .nav-tabs {
+          border-bottom: 0; }
+          html body content .left-part .nav-tabs li {
+            width: 50%; }
+          html body content .left-part .nav-tabs li a {
+            margin-right: 0;
+            text-align: center;
+            color: #000; }
+          html body content .left-part .nav-tabs .active {
+            border-bottom: 3px solid #2b9ecc; }
+        html body content .left-part .tab-content {
+          font-size: 12px;
+          line-height: 25px; }
+          html body content .left-part .tab-content li {
+            cursor: pointer; }
+          html body content .left-part .tab-content .list1 > li > div span {
+            padding-left: 30px; }
+          html body content .left-part .tab-content .list2 > li > div span {
+            padding-left: 45px; }
+          html body content .left-part .tab-content .list3 > li > span {
+            padding-left: 60px; }
+          html body content .left-part .tab-content .list3 > li:hover {
+            background: #ffffff; }
+          html body content .left-part .tab-content .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            color: #999999;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+            display: inline-block;
+            margin-right: 5px; }
+          html body content .left-part .tab-content .downArrow {
+            display: inline-block;
+            float: right; }
+          html body content .left-part .tab-content #newModel {
+            text-decoration: underline;
+            padding-left: 10px; }
+            html body content .left-part .tab-content #newModel .iconfont {
+              margin-right: 2px; }
+      html body content .right-part {
+        position: relative;
+        top: -20px;
+        height: calc(100% - 52px);
+        width: calc(100% - 242px); }
+        html body content .right-part .title span {
+          line-height: 42px;
+          font-size: 17px; }
+        html body content .right-part .drawing {
+          height: 50%; }
+          html body content .right-part .drawing .title {
+            height: 42px;
+            margin: 0; }
+            html body content .right-part .drawing .title ul {
+              margin: 0;
+              height: 42px;
+              line-height: 42px;
+              float: right;
+              font-size: 12px;
+              text-align: center; }
+              html body content .right-part .drawing .title ul li {
+                display: inline-block;
+                line-height: 20px;
+                width: 70px;
+                border: solid 1px #2b9ecc; }
+          html body content .right-part .drawing a:link, html body content .right-part .drawing a:visited, html body content .right-part .drawing a:hover, html body content .right-part .drawing a:active {
+            text-decoration: none;
+            color: #2b9ecc; }
+          html body content .right-part .drawing div:last-child {
+            height: calc(100% - 42px);
+            background: #ffffff; }
+        html body content .right-part .result-table {
+          height: 50%;
+          font-size: 12px; }
+          html body content .right-part .result-table .result-group {
+            height: calc(100% - 42px);
+            background: #ffffff; }
+
+/*# sourceMappingURL=index.css.map */

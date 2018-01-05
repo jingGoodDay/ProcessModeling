@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>title</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/index.css">
+		</head>
+	<body>
+	    <!-- 头部开始 -->
+	    <header>
+	        <nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+							<!--<img alt="Brand" src="img/"> -->
+							<i class="iconfont">&#xe75e;</i>
+							维度积木
+						</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">数据资源</a></li>
+							<li class="active"><a href="#">数据建模</a></li>
+							<li><a href="#">模型展示</a></li>
+							<li><a href="#">模型中心</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="iconfont">&#xe624;</i> 用户名<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="iconfont">&#xe66f;</i>退出</a></li>
+									<li><a href="#"><i class="iconfont">&#xe601;</i>个人资料</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+	        </nav>
+	    </header>
+	    <!-- 头部结束 -->
+
+	    <!-- 内容开始 -->
+	    <content>
+	        <div class="left-part col-xs-3">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">数据积木</a></li>
+					<li role="presentation"><a href="#model" aria-controls="model" role="tab" data-toggle="tab">我的模型</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="data">
+						<ul class="list-unstyled list1">
+							<li>
+								<div><span><i class="iconfont">&#xe659;</i>数据资源</span><i class="iconfont downArrow">&#xe63c;</i></div>
+								<ul class="list-unstyled list2">
+									<li>
+										<div><span><i class="iconfont">&#xe600;</i>基础信息</span><i class="iconfont downArrow">&#xe63c;</i></div>
+										<ul class="list-unstyled list3">
+											<li><span><i class="iconfont">&#xe64c;</i>驾驶员信息</span></li>
+											<li><span><i class="iconfont">&#xe64c;</i>校车备案表</span></li>
+											<li><span><i class="iconfont">&#xe64c;</i>机动车基本信息</span></li>
+										</ul>
+									</li>
+									<li>
+										<div><span><i class="iconfont">&#xe600;</i>车辆</span><i class="iconfont downArrow">&#xe63c;</i></div>
+										<ul class="list-unstyled list3">
+											<li><span><i class="iconfont">&#xe64c;</i>号牌识别信息表</span></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div><span><i class="iconfont">&#xe605;</i>分析池</span><i class="iconfont downArrow">&#xe63c;</i></div>
+								<ul class="list-unstyled list2">
+									<li>
+										<div><span><i class="iconfont">&#xe600;</i>结果集1</span></div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div><span><i class="iconfont">&#xe694;</i>临时结果</span><i class="iconfont downArrow">&#xe63c;</i></div>
+							</li>
+						</ul>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="model">
+						<ul class="list-unstyled list1">
+							<li><div><span><i class="iconfont">&#xe631;</i>未发布的模型</span><i class="iconfont downArrow">&#xe63c;</i></div></li>
+							<li><div><span><i class="iconfont">&#xe625;</i>已发布的模型</span><span id="newModel"><i class="iconfont">&#xe699;</i>新增模型组</span><i class="iconfont downArrow">&#xe63c;</i></div></li>
+						</ul>
+					</div>
+				</div>
+
+
+	        </div>
+			<div class="right-part col-xs-9">
+				<div class="drawing">
+					<div class="title">
+						<span>数据分析</span>
+						<ul class="list-unstyled">
+							<li class="active"><a href="#">保存</a></li>
+							<li><a href="#">发布</a></li>
+							<li><a href="#">更新模型</a></li>
+							<li><a href="#">全部执行</a></li>
+							<li><a href="#">全部移除</a></li>
+						</ul>
+					</div>
+					<div></div>
+				</div>
+				<div class="result-table">
+					<div class="title"><span>号牌识别信息表</span></div>
+					<div class="result-group table-responsive">
+						<table class="table table-striped table-condensed">
+							<tr>
+								<th>序号</th>
+								<th>号牌号码</th>
+								<th>过车时间</th>
+								<th>号牌颜色</th>
+								<th>卡点编号</th>
+								<th>单位名称</th>
+								<th>车辆品牌</th>
+								<th>车辆型号</th>
+								<th>方向编号</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>鄂A02356</td>
+								<td>2016-09-12 13:09:34</td>
+								<td>1</td>
+								<td>42017283926</td>
+								<td>武汉市东西湖区走马岭路枫林小区</td>
+								<td>奥迪</td>
+								<td>车型123</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>鄂A02356</td>
+								<td>2016-09-12 13:09:34</td>
+								<td>1</td>
+								<td>42017283926</td>
+								<td>武汉市东西湖区走马岭路枫林小区</td>
+								<td>奥迪</td>
+								<td>车型123</td>
+								<td>11</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+	    </content>
+	    <!-- 内容结束 -->
+
+	    <!-- 脚注开始 -->
+	    <footer>
+	        <div>
+
+	        </div>
+	    </footer>
+	    <!-- 脚注结束 -->
+	<script src="lib/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
+	</body>
+</html>

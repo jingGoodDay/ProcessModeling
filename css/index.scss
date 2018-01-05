@@ -1,0 +1,187 @@
+$themeRed:rgba(255,107,107,1);
+$themeBlue: rgb(43, 158, 204);
+$fontSize:12px;
+@font-face {
+  font-family: 'iconfont';  /* project id 524218 */
+  src: url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.eot');
+  src: url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.svg#iconfont') format('svg');
+}
+
+html{
+  height:100%;
+  body{
+    background: #f7f7f7;
+    height:100%;
+    width:100%;
+    header{
+      .navbar{
+        background-color: $themeRed;
+        .navbar-brand{
+          color: #ffffff;
+          font-size: $fontSize+10px;
+          //font-weight:bold;
+        }
+        .navbar-brand:hover{
+          color: #ffffff;
+          cursor: default;
+        }
+        .navbar-nav{
+          li{
+            a{
+              color: #ffffff;
+            }
+            a.dropdown-toggle{
+              line-height: 18px;
+            }
+            .dropdown-menu a{
+              color: #000;
+              .iconfont{
+                font-size: $fontSize+2px;
+                color: #000;
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+        .iconfont{
+          font-family:"iconfont" !important;
+          font-size:$fontSize+8px;font-style:normal;
+          font-weight: normal;
+          color: #ffffff;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+    content{
+      height:calc(100% - 52px);
+      .left-part{
+        position: relative;
+        top:-20px;
+        height: calc(100% - 52px);
+        width: 240px;
+        border-right:2px solid #ebeff2;
+        padding:0;
+
+        .nav-tabs{
+          border-bottom: 0;
+          li{
+            width:50%;
+          }
+          li a{
+            margin-right: 0;
+            text-align: center;
+            color: #000;
+          }
+          .active{
+            border-bottom: 3px solid $themeBlue;
+          }
+        }
+
+        //左侧树状菜单
+        .tab-content{
+          font-size: $fontSize;
+          line-height:25px;
+          li{
+            cursor: pointer;
+          }
+          .list1 > li >div span{
+            padding-left:30px;//缩进
+          }
+          .list2 > li >div span{
+            padding-left:45px;
+          }
+          .list3 > li > span{
+            padding-left:60px;
+          }
+          .list3>li:hover{
+            background: #ffffff;
+          }
+
+          .iconfont{
+            font-family:"iconfont" !important;
+            font-size: $fontSize+2px;font-style: normal;
+            font-weight: normal;
+            color: #999999;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+            display: inline-block;
+            margin-right:5px;
+          }
+
+          .downArrow{
+            display: inline-block;
+            float: right;
+          }
+
+          #newModel{
+            text-decoration: underline;
+            padding-left: 10px;
+            .iconfont{
+              margin-right: 2px;
+            }
+          }
+        }
+      }
+      .right-part{
+        position: relative;
+        top:-20px;
+        height: calc(100% - 52px);
+        width: calc(100% - 242px);
+        .title{
+          span{
+            line-height: 42px;
+            font-size: $fontSize+5px;
+          }
+        };
+        .drawing{
+          height: 50%;
+          .title{
+            height: 42px;
+            margin:0;
+            ul{
+              margin:0;
+              height:42px;
+              line-height:42px;
+              float: right;
+              font-size: $fontSize;
+              text-align: center;
+              li{
+                display: inline-block;
+                line-height: 20px;
+                width: 70px;
+                border: solid 1px $themeBlue;
+              }
+            }
+          }
+          a:link,a:visited,a:hover,a:active{
+            text-decoration: none;
+            color: $themeBlue;;
+          }
+          div:last-child{
+            height: calc(100% - 42px);
+            background: #ffffff;
+          }
+        }
+        .result-table{
+          height:50%;
+          font-size: $fontSize;
+          .result-group{
+            height: calc(100% - 42px);
+            background: #ffffff;
+          }
+
+        }
+      }
+    }
+
+
+  }
+
+}
+
