@@ -96,7 +96,7 @@ html {
           line-height: 42px;
           font-size: 17px; }
         html body content .right-part .drawing {
-          height: 50%; }
+          height: 60%; }
           html body content .right-part .drawing .title {
             height: 42px;
             margin: 0; }
@@ -119,7 +119,7 @@ html {
             height: calc(100% - 42px);
             background: #ffffff; }
         html body content .right-part .result-table {
-          height: 50%;
+          height: 40%;
           font-size: 12px; }
           html body content .right-part .result-table .result-group {
             height: calc(100% - 42px);
