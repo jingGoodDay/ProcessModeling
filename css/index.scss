@@ -13,7 +13,7 @@ $fontSize:12px;
 html{
   height:100%;
   body{
-    background: #f7f7f7;
+    background-color: #f7f7f7;
     height:100%;
     width:100%;
     header{
@@ -156,6 +156,7 @@ html{
                 line-height: 20px;
                 width: 70px;
                 border: solid 1px $themeBlue;
+                cursor: pointer;
               }
             }
           }
@@ -166,6 +167,117 @@ html{
           div:last-child{
             height: calc(100% - 42px);
             background: #ffffff;
+          }
+          #myholder{
+            position: relative;
+            overflow:auto;
+
+            .item {
+              border: 1px solid #346789;
+              box-shadow: 2px 2px 19px #aaa;
+              -o-box-shadow: 2px 2px 19px #aaa;
+              -webkit-box-shadow: 2px 2px 19px #aaa;
+              -moz-box-shadow: 2px 2px 19px #aaa;
+              -moz-border-radius: 0.5em;
+              border-radius: 0.5em;
+              opacity: 0.8;
+              width: 110px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              text-align: center;
+              z-index: 20;
+              position: absolute;
+              background-color: #eeeeef;
+              color: black;
+              font-family: helvetica, sans-serif;
+              padding: 0.5em;
+              font-size: 0.9em;
+              -webkit-transition: -webkit-box-shadow 0.15s ease-in;
+              -moz-transition: -moz-box-shadow 0.15s ease-in;
+              -o-transition: -o-box-shadow 0.15s ease-in;
+              transition: box-shadow 0.15s ease-in;
+            }
+
+            .item:hover {
+              box-shadow: 2px 2px 19px #444;
+              -o-box-shadow: 2px 2px 19px #444;
+              -webkit-box-shadow: 2px 2px 19px #444;
+              -moz-box-shadow: 2px 2px 19px #444;
+              opacity: 0.6;
+            }
+
+            .active {
+              border: 1px dotted green;
+            }
+
+            .hover {
+              border: 1px dotted red;
+            }
+
+            //#Window1 {
+            //  top: 12em;
+            //  left: 5em;
+            //}
+            //
+            //#Window2 {
+            //  top: 7em;
+            //  left: 36em;
+            //}
+            //
+            //#Window3 {
+            //  top: 27em;
+            //  left: 48em;
+            //}
+            //
+            //#Window4 {
+            //  top: 23em;
+            //  left: 22em;
+            //}
+
+            .jtk-connector {
+              z-index: 4;
+            }
+
+            .jtk-endpoint, .endpointTargetLabel, .endpointSourceLabel {
+              z-index: 21;
+              cursor: pointer;
+            }
+
+            .aLabel {
+              background-color: white;
+              padding: 0.4em;
+              font: 12px sans-serif;
+              color: #444;
+              z-index: 21;
+              border: 1px dotted gray;
+              opacity: 0.8;
+              cursor: pointer;
+            }
+
+            .aLabel.jtk-hover {
+              background-color: #5C96BC;
+              color: white;
+              border: 1px solid white;
+            }
+
+            .item.jtk-connected {
+              border: 1px solid green;
+            }
+
+            .jtk-drag {
+              outline: 4px solid pink !important;
+            }
+
+            path, .jtk-endpoint {
+              cursor: pointer;
+            }
+
+            .jtk-overlay {
+              background-color:transparent;
+            }
           }
         }
         .result-table{

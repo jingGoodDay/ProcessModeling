@@ -6,7 +6,7 @@
 html {
   height: 100%; }
   html body {
-    background: #f7f7f7;
+    background-color: #f7f7f7;
     height: 100%;
     width: 100%; }
     html body header .navbar {
@@ -111,13 +111,80 @@ html {
                 display: inline-block;
                 line-height: 20px;
                 width: 70px;
-                border: solid 1px #2b9ecc; }
+                border: solid 1px #2b9ecc;
+                cursor: pointer; }
           html body content .right-part .drawing a:link, html body content .right-part .drawing a:visited, html body content .right-part .drawing a:hover, html body content .right-part .drawing a:active {
             text-decoration: none;
             color: #2b9ecc; }
           html body content .right-part .drawing div:last-child {
             height: calc(100% - 42px);
             background: #ffffff; }
+          html body content .right-part .drawing #myholder {
+            position: relative;
+            overflow: auto; }
+            html body content .right-part .drawing #myholder .item {
+              border: 1px solid #346789;
+              box-shadow: 2px 2px 19px #aaa;
+              -o-box-shadow: 2px 2px 19px #aaa;
+              -webkit-box-shadow: 2px 2px 19px #aaa;
+              -moz-box-shadow: 2px 2px 19px #aaa;
+              -moz-border-radius: 0.5em;
+              border-radius: 0.5em;
+              opacity: 0.8;
+              width: 110px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              text-align: center;
+              z-index: 20;
+              position: absolute;
+              background-color: #eeeeef;
+              color: black;
+              font-family: helvetica, sans-serif;
+              padding: 0.5em;
+              font-size: 0.9em;
+              -webkit-transition: -webkit-box-shadow 0.15s ease-in;
+              -moz-transition: -moz-box-shadow 0.15s ease-in;
+              -o-transition: -o-box-shadow 0.15s ease-in;
+              transition: box-shadow 0.15s ease-in; }
+            html body content .right-part .drawing #myholder .item:hover {
+              box-shadow: 2px 2px 19px #444;
+              -o-box-shadow: 2px 2px 19px #444;
+              -webkit-box-shadow: 2px 2px 19px #444;
+              -moz-box-shadow: 2px 2px 19px #444;
+              opacity: 0.6; }
+            html body content .right-part .drawing #myholder .active {
+              border: 1px dotted green; }
+            html body content .right-part .drawing #myholder .hover {
+              border: 1px dotted red; }
+            html body content .right-part .drawing #myholder .jtk-connector {
+              z-index: 4; }
+            html body content .right-part .drawing #myholder .jtk-endpoint, html body content .right-part .drawing #myholder .endpointTargetLabel, html body content .right-part .drawing #myholder .endpointSourceLabel {
+              z-index: 21;
+              cursor: pointer; }
+            html body content .right-part .drawing #myholder .aLabel {
+              background-color: white;
+              padding: 0.4em;
+              font: 12px sans-serif;
+              color: #444;
+              z-index: 21;
+              border: 1px dotted gray;
+              opacity: 0.8;
+              cursor: pointer; }
+            html body content .right-part .drawing #myholder .aLabel.jtk-hover {
+              background-color: #5C96BC;
+              color: white;
+              border: 1px solid white; }
+            html body content .right-part .drawing #myholder .item.jtk-connected {
+              border: 1px solid green; }
+            html body content .right-part .drawing #myholder .jtk-drag {
+              outline: 4px solid pink !important; }
+            html body content .right-part .drawing #myholder path, html body content .right-part .drawing #myholder .jtk-endpoint {
+              cursor: pointer; }
+            html body content .right-part .drawing #myholder .jtk-overlay {
+              background-color: transparent; }
         html body content .right-part .result-table {
           height: 40%;
           font-size: 12px; }
