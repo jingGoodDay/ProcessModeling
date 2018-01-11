@@ -7,7 +7,6 @@ $(document).ready(function(){
 let indexPg={
     init:function () {
         indexPg.dragInit();
-        map.initMap();
         $('#data').on('click','li div',function (event) {
             console.log(event.currentTarget);
             $(event.currentTarget).next().slideToggle();
@@ -36,7 +35,9 @@ let indexPg={
             let windowID="Window"+index;
             $(ev.target).append('<div id="'+windowID+'" class="item">'+data.split("").slice(1).join("")+'</div>');
             index++;
-            $('#'+windowID).css({top:(ev.offsetY-20).toString()+'px',left:(ev.offsetX-55).toString()+'px'})
+            $('#'+windowID).css({top:(ev.offsetY-20).toString()+'px',left:(ev.offsetX-55).toString()+'px'});
+
+            map.initMap(windowID);
         });
     }
 
