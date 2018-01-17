@@ -174,9 +174,139 @@
 
 	        </div>
 	    </footer>
+
+        <!-- Modal模态框、弹出框 -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!--模态框标题-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">关联设置</h4>
+                    </div>
+                    <!--模态框主要内容-->
+                    <div class="modal-body">
+                        <!--标签页标题部分-->
+                        <ul class="nav nav-tabs tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#basicRelation" aria-controls="basicRelation" role="tab" data-toggle="tab">基本关联</a></li>
+                            <li role="presentation"><a href="#spatialRelation" aria-controls="spatialRelation" role="tab" data-toggle="tab">空间关联</a></li>
+                        </ul>
+                        <!--每个标签页的内容-->
+                        <div class="tab-content content">
+                            <div role="tabpanel" class="tab-pane active" id="basicRelation">
+								<form>
+									<div class="basic-input">
+										<label for="basic-resultData" class="text">结果集中文名：</label>
+										<input type="text" name="resultData" class="resultData" id="basic-resultData" value="步骤结果1">
+									</div>
+
+									<ul class="list-unstyled relations">
+										<li class="active"><a href="#"><i class="iconfont">&#xe6bc;</i><span>内连接</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe7cb;</i><span>去重合并</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe6bb;</i><span>左排除</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe659;</i><span>左连接</span></a></li>
+									</ul>
+
+									<ul class="list-unstyled selectField">
+										<li><a href="#">表名A</a></li>
+										<li><a href="#">表名B</a></li>
+										<li><a href="#myModal2" class="select">筛选字段</a></li>
+										<li><a href="#myModal2" class="select">筛选字段</a></li>
+									</ul>
+									<div class="selectList">
+										<select name="leftList" class="leftList">
+											<option value="null"></option>
+											<option value="1">过车序号</option>
+											<option value="2">车道编号</option>
+											<option value="3">车身颜色</option>
+										</select>
+										<select name="operation" class="operation">
+											<option value="null"></option>
+											<option value="1">=</option>
+											<option value="2">+</option>
+											<option value="3">-</option>
+										</select>
+										<select name="rightList" class="rightList">
+											<option value="null"></option>
+											<option value="1">过车序号</option>
+											<option value="2">车道编号</option>
+											<option value="3">车身颜色</option>
+										</select>
+										<span><i class="iconfont">&#xe61f;</i></span>
+									</div>
+
+								</form>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="spatialRelation">
+								<form>
+									<div class="basic-input">
+										<label for="basic-resultData" class="text">结果集中文名：</label>
+										<input type="text" name="resultData" class="resultData" id="spatial-resultData" value="步骤结果1">
+									</div>
+
+									<ul class="list-unstyled relations">
+										<li class="active"><a href="#"><i class="iconfont">&#xe6bc;</i><span>交集</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe7cb;</i><span>并集</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe6bb;</i><span>包含</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe659;</i><span>排除</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe6bc;</i><span>交集取反</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe7cb;</i><span>距离筛选</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe6bb;</i><span>最近邻</span></a></li>
+										<li><a href="#"><i class="iconfont">&#xe659;</i><span>相离</span></a></li>
+									</ul>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+						<button type="button" class="btn active">确定</button>
+						<button type="button" class="btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!--模态框标题-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel2">选择表结构字段</h4>
+                    </div>
+                    <!--模态框主要内容-->
+                    <div class="modal-body">
+                        <!--标签页标题部分-->
+						<form>
+							<div><input type="checkbox" name="vehicle"/> 过车序号</div>
+							<div><input type="checkbox" name="vehicle" checked="checked" /> 车道编号</div>
+							<div><input type="checkbox" name="vehicle"/> 过车序号过车序号</div>
+							<div><input type="checkbox" name="vehicle"/> 车道编号</div>
+							<div><input type="checkbox" name="vehicle"/> 过车序号过车序号</div>
+							<div><input type="checkbox" name="vehicle"/> 车道编号</div>
+							<div><input type="checkbox" name="vehicle"/> 过车序号</div>
+							<div><input type="checkbox" name="vehicle"/> 车道编号过车序号</div>
+							<div><input type="checkbox" name="vehicle"/> 过车序号</div>
+							<div><input type="checkbox" name="vehicle"/> 车道编号</div>
+							<div><input type="checkbox" name="vehicle"/> 过车序号</div>
+							<div><input type="checkbox" name="vehicle" checked="checked" /> 车道编号过车序号过车序号</div>
+						</form>
+                    </div>
+                    <div class="modal-footer">
+						<button type="button" class="btn">全选</button>
+						<button type="button" class="btn">反选</button>
+                        <button type="button" class="btn active">确定</button>
+                        <button type="button" class="btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 	    <!-- 脚注结束 -->
 	    <script src="lib/jquery.min.js"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!--<script src="lib/tooltip.js"></script>-->
+        <!--<script src="lib/popover.js"></script>-->
         <script src="lib/jsplumb.js"></script>
         <script src="lib/lodash.min.js"></script>
         <script src="lib/backbone-min.js"></script>

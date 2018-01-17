@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'iconfont';
   /* project id 524218 */
-  src: url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.eot");
-  src: url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.woff") format("woff"), url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.ttf") format("truetype"), url("//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.svg#iconfont") format("svg"); }
+  src: url("//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.eot");
+  src: url("//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.woff") format("woff"), url("//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.ttf") format("truetype"), url("//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.svg#iconfont") format("svg"); }
 html {
   height: 100%; }
   html body {
@@ -191,5 +191,168 @@ html {
           html body content .right-part .result-table .result-group {
             height: calc(100% - 42px);
             background: #ffffff; }
+    html body .modal-content {
+      height: 480px;
+      position: relative;
+      font-size: 12px;
+      font-weight: normal; }
+      html body .modal-content .modal-header {
+        padding: 5px 15px;
+        text-align: center;
+        background-color: #e5e5e5;
+        border-radius: 5px; }
+        html body .modal-content .modal-header .modal-title {
+          font-size: 15px; }
+      html body .modal-content .modal-body {
+        height: 380px; }
+        html body .modal-content .modal-body .tabs {
+          border-bottom: 0;
+          margin-bottom: 1px; }
+          html body .modal-content .modal-body .tabs li {
+            width: 50%;
+            height: 35px;
+            margin-left: -1px; }
+          html body .modal-content .modal-body .tabs li a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            margin-right: 0;
+            text-align: center;
+            color: #000;
+            box-sizing: border-box;
+            padding: 5px;
+            border: solid 1px #e5e5e5;
+            border-radius: 0; }
+          html body .modal-content .modal-body .tabs .active a {
+            color: #2b9ecc;
+            border-top: 3px solid #2b9ecc; }
+        html body .modal-content .modal-body .content .basic-input {
+          margin: 20px 0 10px 0; }
+          html body .modal-content .modal-body .content .basic-input label {
+            font-weight: normal; }
+          html body .modal-content .modal-body .content .basic-input input {
+            margin-left: 3px;
+            padding-left: 7px;
+            border: solid 1px #e5e5e5;
+            width: 200px; }
+        html body .modal-content .modal-body .content .relations {
+          text-align: center;
+          border: 0;
+          margin-right: -1px;
+          margin-left: 2px; }
+          html body .modal-content .modal-body .content .relations li {
+            display: inline-block;
+            font-size: 12px;
+            height: 30px;
+            width: 25%;
+            border: 1px solid #e5e5e5;
+            margin: 0 0 0 -4px; }
+          html body .modal-content .modal-body .content .relations li a {
+            color: #000;
+            padding: 0;
+            height: 100%;
+            line-height: 28px;
+            text-align: center;
+            border: 0;
+            border-radius: 0;
+            background: transparent; }
+            html body .modal-content .modal-body .content .relations li a span {
+              display: inline-block;
+              position: relative;
+              top: -2px; }
+          html body .modal-content .modal-body .content .relations .active {
+            background-color: #2b9ecc; }
+            html body .modal-content .modal-body .content .relations .active a {
+              color: #ffffff; }
+              html body .modal-content .modal-body .content .relations .active a .iconfont {
+                color: #ffffff; }
+        html body .modal-content .modal-body .content .selectField {
+          text-align: center;
+          margin-left: 3px; }
+          html body .modal-content .modal-body .content .selectField li {
+            display: inline-block;
+            width: 50%;
+            height: 30px;
+            margin-left: -4px;
+            margin-top: -1px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #e5e5e5; }
+            html body .modal-content .modal-body .content .selectField li a:link, html body .modal-content .modal-body .content .selectField li a:visited, html body .modal-content .modal-body .content .selectField li a:hover, html body .modal-content .modal-body .content .selectField li a:active {
+              text-decoration: none;
+              color: #000000; }
+            html body .modal-content .modal-body .content .selectField li a.select {
+              text-decoration: underline;
+              color: #2b9ecc; }
+        html body .modal-content .modal-body .content .selectList {
+          height: 20px;
+          line-height: 20px;
+          margin-top: 10px; }
+          html body .modal-content .modal-body .content .selectList select {
+            border: solid 1px #e5e5e5;
+            display: inline-block; }
+            html body .modal-content .modal-body .content .selectList select option {
+              line-height: 20px; }
+          html body .modal-content .modal-body .content .selectList .leftList {
+            width: 40%;
+            height: 100%; }
+          html body .modal-content .modal-body .content .selectList .operation {
+            height: 100%;
+            width: 8%; }
+          html body .modal-content .modal-body .content .selectList .rightList {
+            height: 100%;
+            width: 40%; }
+          html body .modal-content .modal-body .content .selectList span {
+            cursor: pointer; }
+            html body .modal-content .modal-body .content .selectList span .iconfont {
+              font-size: 16px; }
+      html body .modal-content .modal-footer {
+        border: 0; }
+        html body .modal-content .modal-footer button {
+          font-size: 12px;
+          width: 80px;
+          padding: 3px;
+          border-radius: 0;
+          border: solid 1px #2b9ecc;
+          background-color: #ffffff;
+          color: #2b9ecc; }
+        html body .modal-content .modal-footer button.active {
+          color: #ffffff;
+          border-color: #2b9ecc;
+          background-color: #2b9ecc; }
+      html body .modal-content .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: normal;
+        color: #999999;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        margin-right: 5px; }
+    html body #myModal2 .modal-dialog {
+      margin-top: 80px; }
+      html body #myModal2 .modal-dialog .modal-content {
+        height: 500px; }
+        html body #myModal2 .modal-dialog .modal-content .modal-body {
+          height: 400px; }
+          html body #myModal2 .modal-dialog .modal-content .modal-body form {
+            width: 100%;
+            margin-left: 25px; }
+            html body #myModal2 .modal-dialog .modal-content .modal-body form div {
+              display: inline-block;
+              text-align: left;
+              width: 30%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap; }
+        html body #myModal2 .modal-dialog .modal-content .modal-footer {
+          text-align: center; }
+          html body #myModal2 .modal-dialog .modal-content .modal-footer button {
+            height: 22px;
+            width: 70px;
+            line-height: 22px;
+            padding: 0; }
 
 /*# sourceMappingURL=index.css.map */

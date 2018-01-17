@@ -1,6 +1,6 @@
 $(document).ready(function(){
     indexPg.init();
-
+    // $('#myModal').modal();
 
 });
 
@@ -12,7 +12,30 @@ let indexPg={
             $(event.currentTarget).next().slideToggle();
         });
 
+        //模态框中的筛选字段-点击弹出弹窗，选择字段
+        $('.modal-body .selectField .select').on('click',function(){
+            console.log("select");
+            $('#myModal2').modal();
+        });
+
+
+        //模态框中基本关联中的连接类型选择-绑定激活状态的点击事件
+        $('#basicRelation .relations li').on('click',function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+
+        //模态框中的取消按键和右上角小叉，绑定关闭事件，并取消连线
+        $('.modal-footer .cancel,#myModal .close').on('click',function () {
+            $('#myModal').modal('hide');
+        });
+        
+        $('').on('click',function () {
+            
+        })
+
+
     },
+
     dragInit:function () {
         let index=1;
         //给所有可拖拽的<li>标签添加可拖拽属性

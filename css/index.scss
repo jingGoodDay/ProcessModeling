@@ -1,13 +1,14 @@
 $themeRed:rgba(255,107,107,1);
 $themeBlue: rgb(43, 158, 204);
+$themeGray: #e5e5e5;
 $fontSize:12px;
 @font-face {
   font-family: 'iconfont';  /* project id 524218 */
-  src: url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.eot');
-  src: url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_524218_i1rq1jjzemrysyvi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.eot');
+  src: url('//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_524218_nih3u6xst51m7vi.svg#iconfont') format('svg');
 }
 
 html{
@@ -271,7 +272,226 @@ html{
         }
       }
     }
+    .modal-content{
+      height:480px;
+      position: relative;
+      font-size: $fontSize;
+      font-weight: normal;
+      .modal-header{
+        padding: 5px 15px;
+        text-align: center;
+        background-color: $themeGray;
+        border-radius: 5px;
+        .modal-title{
+          font-size: 15px;
+        }
+      }
+      .modal-body {
+        height: 380px;
+        .tabs {
+          border-bottom: 0;
+          li {
+            width: 50%;
+            height: 35px;
+            margin-left: -1px;
+          }
+          li a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            margin-right: 0;
+            text-align: center;
+            color: #000;
+            box-sizing: border-box;
+            padding: 5px;
+            border: solid 1px $themeGray;
+            border-radius: 0;
+          }
+          .active a {
+            color: $themeBlue;
+            border-top: 3px solid $themeBlue;
+          }
+          margin-bottom: 1px;
+        }
 
+        .content {
+            .basic-input{
+              margin: 20px 0 10px 0;
+              label{
+                font-weight: normal;
+              }
+              input{
+                margin-left: 3px;
+                padding-left: 7px;
+                border:solid 1px $themeGray;
+                width:200px;
+              }
+            }
+
+            .relations {
+              text-align: center;
+              border: 0;
+              margin-right:-1px;
+              margin-left:2px;
+              li {
+                display: inline-block;
+                font-size: $fontSize;
+                height: 30px;
+                width: 25%;
+                border: 1px solid $themeGray;
+                margin:0 0 0 -4px;
+              }
+              li a {
+                color: #000;
+                padding: 0;
+                height: 100%;
+                line-height: 28px;
+                text-align: center;
+                border: 0;
+                //margin-bottom:-1px;
+                border-radius: 0;
+                background: transparent;
+                span {
+                  display: inline-block;
+                  position: relative;
+                  top: -2px;
+                }
+              }
+              .active {
+                background-color: $themeBlue;
+                a {
+                  color: #ffffff;
+                  .iconfont {
+                    color: #ffffff;
+                  }
+                }
+              }
+            }
+            .selectField{
+              text-align: center;
+              margin-left: 3px;
+              li {
+                display: inline-block;
+                width: 50%;
+                height: 30px;
+                margin-left: -4px;
+                margin-top: -1px;
+                text-align: center;
+                line-height: 30px;
+                border: 1px solid $themeGray;
+                a:link, a:visited, a:hover, a:active {
+                  text-decoration: none;
+                  color: #000000;
+                }
+                a.select {
+                  text-decoration: underline;
+                  color: $themeBlue;
+                }
+              }
+            }
+
+            .selectList{
+              height:20px;
+              line-height: 20px;
+              margin-top:10px;
+              select{
+                border:solid 1px $themeGray;
+                display: inline-block;
+                option{
+                  line-height: 20px;
+                }
+              }
+              .leftList{
+                width:40%;
+                height:100%;
+              }
+              .operation{
+                height:100%;
+                width:8%;
+              }
+              .rightList{
+                height:100%;
+                width:40%;
+              }
+              span{
+                cursor: pointer;
+                .iconfont{
+                  font-size: $fontSize+4px;
+                }
+              }
+
+
+
+            }
+
+          #basicRelation {
+          }
+        }
+      }
+
+      .modal-footer{
+        border:0;
+        button{
+          font-size: $fontSize;
+          width:80px;
+          padding:3px;
+          border-radius: 0;
+          border:solid 1px $themeBlue;
+          background-color: #ffffff;
+          color: $themeBlue;
+        }
+        button.active{
+          color: #ffffff;
+          border-color:$themeBlue;
+          background-color:$themeBlue;
+        }
+      }
+      .iconfont{
+        font-family:"iconfont" !important;
+        font-size: $fontSize+4px;font-style: normal;
+        font-weight: normal;
+        color: #999999;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        margin-right:5px;
+      }
+    }
+    #myModal2{
+      .modal-dialog{
+        margin-top: 80px;
+        //width:50%;
+        .modal-content{
+          height:500px;
+          .modal-body{
+            height:400px;
+            form{
+              width:100%;
+              margin-left: 25px;
+              div{
+                display: inline-block;
+                text-align: left;
+                width:30%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+          }
+          .modal-footer{
+            text-align: center;
+            button{
+              height:22px;
+              width: 70px;
+              line-height: 22px;
+              padding:0
+            }
+          }
+        }
+      }
+
+    }
 
   }
 

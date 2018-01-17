@@ -165,12 +165,17 @@ let map={
                 conn.toggleType("basic");
             });
 
+            //拉出连接线时
             map.instance.bind("connectionDrag", function (connection) {
-                console.log("connection " + connection.id + " is being dragged. suspendedElement is ", connection.suspendedElement, " of type ", connection.suspendedElementType);
+                console.log("connection " + connection.id + " is being dragged." );
             });
 
+            //完成连接时
             map.instance.bind("connectionDragStop", function (connection) {
+                $('#myModal').modal();
+                $()
                 console.log("connection " + connection.id + " was dragged");
+
             });
 
             map.instance.bind("connectionMoved", function (params) {
