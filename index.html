@@ -117,10 +117,9 @@
 					</div>
                     <!--流程图画布-->
                     <div id="myholder">
-                        <!--<div id="Window1" class="item"></div>-->
-                        <!--<div id="Window2" class="item"></div>-->
-                        <!--<div id="Window3" class="item"></div>-->
-                        <!--<div id="Window4" class="item"></div>-->
+                        <!--<div id="Window1" class="item">-->
+							<!--<div class="del"><i class="iconfont">&#xe631;</i></div>-->
+						<!--</div>-->
                     </div>
 				</div>
 				<div class="result-table">
@@ -208,17 +207,17 @@
 									</ul>
 
 									<ul class="list-unstyled selectField">
-										<li><a href="#">表名A</a></li>
-										<li><a href="#">表名B</a></li>
-										<li><a href="#myModal2" class="select">筛选字段</a></li>
-										<li><a href="#myModal2" class="select">筛选字段</a></li>
+										<li class="listA"><a href="#">表名A</a></li>
+										<li class="listB"><a href="#">表名B</a></li>
+										<li><a href="#myModal2" class="selectA">请选择字段</a></li>
+										<li><a href="#myModal2" class="selectB">请选择字段</a></li>
 									</ul>
 									<div class="selectList">
-										<select name="leftList" class="leftList">
+										<select name="leftList" class="selectListA">
 											<option value="null"></option>
-											<option value="1">过车序号</option>
-											<option value="2">车道编号</option>
-											<option value="3">车身颜色</option>
+											<!--<option value="1">过车序号</option>-->
+											<!--<option value="2">车道编号</option>-->
+											<!--<option value="3">车身颜色</option>-->
 										</select>
 										<select name="operation" class="operation">
 											<option value="null"></option>
@@ -226,11 +225,9 @@
 											<option value="2">+</option>
 											<option value="3">-</option>
 										</select>
-										<select name="rightList" class="rightList">
+										<select name="rightList" class="selectListB">
 											<option value="null"></option>
-											<option value="1">过车序号</option>
-											<option value="2">车道编号</option>
-											<option value="3">车身颜色</option>
+
 										</select>
 										<span><i class="iconfont">&#xe61f;</i></span>
 									</div>
@@ -261,7 +258,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-						<button type="button" class="btn active">确定</button>
+						<button type="button" class="btn done">确定</button>
 						<button type="button" class="btn cancel">取消</button>
                     </div>
                 </div>
@@ -279,24 +276,24 @@
                     <div class="modal-body">
                         <!--标签页标题部分-->
 						<form>
-							<div><input type="checkbox" name="vehicle"/> 过车序号</div>
-							<div><input type="checkbox" name="vehicle" checked="checked" /> 车道编号</div>
-							<div><input type="checkbox" name="vehicle"/> 过车序号过车序号</div>
-							<div><input type="checkbox" name="vehicle"/> 车道编号</div>
-							<div><input type="checkbox" name="vehicle"/> 过车序号过车序号</div>
-							<div><input type="checkbox" name="vehicle"/> 车道编号</div>
-							<div><input type="checkbox" name="vehicle"/> 过车序号</div>
-							<div><input type="checkbox" name="vehicle"/> 车道编号过车序号</div>
-							<div><input type="checkbox" name="vehicle"/> 过车序号</div>
-							<div><input type="checkbox" name="vehicle"/> 车道编号</div>
-							<div><input type="checkbox" name="vehicle"/> 过车序号</div>
-							<div><input type="checkbox" name="vehicle" checked="checked" /> 车道编号过车序号过车序号</div>
+							<div><input type="checkbox" value="过车序号" name="vehicle"/> 过车序号</div>
+							<div><input type="checkbox" value="车道编号" name="vehicle" checked="checked" /> 车道编号</div>
+							<div><input type="checkbox" value="过车序号过车序号" name="vehicle"/> 过车序号过车序号</div>
+							<div><input type="checkbox" value="车道编号" name="vehicle"/> 车道编号</div>
+							<div><input type="checkbox" value="过车序号过车序号" name="vehicle"/> 过车序号过车序号</div>
+							<div><input type="checkbox" value="车道编号" name="vehicle"/> 车道编号</div>
+							<div><input type="checkbox" value="过车序号" name="vehicle"/> 过车序号</div>
+							<div><input type="checkbox" value="车道编号过车序号" name="vehicle"/> 车道编号过车序号</div>
+							<div><input type="checkbox" value="过车序号" name="vehicle"/> 过车序号</div>
+							<div><input type="checkbox" value="车道编号" name="vehicle"/> 车道编号</div>
+							<div><input type="checkbox" value="过车序号" name="vehicle"/> 过车序号</div>
+							<div><input type="checkbox" value="车道编号过车序号" name="vehicle" checked="checked" /> 车道编号过车序号过车序号</div>
 						</form>
                     </div>
                     <div class="modal-footer">
-						<button type="button" class="btn">全选</button>
-						<button type="button" class="btn">反选</button>
-                        <button type="button" class="btn active">确定</button>
+						<button type="button" class="btn selectAll">全选</button>
+						<button type="button" class="btn selectRev">反选</button>
+                        <button type="button" class="btn done">确定</button>
                         <button type="button" class="btn cancel">取消</button>
                     </div>
                 </div>
@@ -315,3 +312,4 @@
         <script src="js/map.js"></script>
 	</body>
 </html>
+

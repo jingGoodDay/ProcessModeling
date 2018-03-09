@@ -118,7 +118,7 @@ let map={
     //     ]
     // },
 
-    initMap:function (windowID) {
+    newMap:function (windowID) {
 
         jsPlumb.ready(function() {
             let _addEndpoints = function (toId, sourceAnchors) {
@@ -139,13 +139,9 @@ let map={
 
             _addEndpoints(windowID, ["TopCenter", "BottomCenter"]);
 
-            // listen for new connections; initialise them the same way we initialise the connections at startup.
-            map.instance.bind("connection", function (connInfo, originalEvent) {
-                init(connInfo.connection);
-            });
-
             // make all the window divs draggable
             map.instance.draggable(jsPlumb.getSelector("#myholder .item"), { grid: [20, 20] });
+
             // THIS DEMO ONLY USES getSelector FOR CONVENIENCE. Use your library's appropriate selector
             // method, or document.querySelectorAll:
             //jsPlumb.draggable(document.querySelectorAll(".window"), { grid: [20, 20] });
@@ -159,142 +155,79 @@ let map={
             //
             // listen for clicks on connections, and offer to delete connections on click.
             //
-            map.instance.bind("click", function (conn, originalEvent) {
-                // if (confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?"))
-                //   instance.detach(conn);
-                conn.toggleType("basic");
-            });
 
-            //拉出连接线时
-            map.instance.bind("connectionDrag", function (connection) {
-                console.log("connection " + connection.id + " is being dragged." );
-            });
 
-            //完成连接时
-            map.instance.bind("connectionDragStop", function (connection) {
-                $('#myModal').modal();
-                $()
-                console.log("connection " + connection.id + " was dragged");
 
-            });
-
-            map.instance.bind("connectionMoved", function (params) {
-                console.log("connection " + params.connection.id + " was moved");
-            });
             // suspend drawing and initialise.
             // instance.batch(function () {
             //
             //
             // });
 
+
+
             jsPlumb.fire("jsPlumbDemoLoaded", map.instance);
 
-
-            // 创建实例，配置默认的绘制属性，建立通用绘图方式等
-            // jsPlumb.setContainer($('#myholder'));
-            // let defaultAnchors = ["Top", "Right", "Bottom", "Left", [0.25, 0, 0, -1], [0.75, 0, 0, -1], [0.25, 1, 0, 1], [0.75, 1, 0, 1]
-            //     , [0, 0.25, 0, -1], [0, 0.75, 0, -1], [1, 0.25, 0, 1], [1, 0.75, 0, 1]];//设置锚点的位置
-            //
-            // firstInstance.registerEndpointTypes({
-            //     "basic":{
-            //         endpoint:"Dot",
-            //         paintStyle:{ radius:5, fill:'#ffffff',stroke:"#FFBA13",strokeWidth:2},
-            //         connectorStyle : { stroke:"#FFBA13" , strokeWidth:3 },
-            //         isTarget:true,
-            //         isSource:true,
-            //         scope:"blueline",
-            //         dragAllowedWhenFull:false
-            //     }
-            //     // "selected":{
-            //     //     endpoint:"Dot",
-            //     //     paintStyle:{ radius:5, fill:'#FFBA13'},
-            //     //     connectorStyle : { stroke:"#FFBA13" , strokeWidth:3 },
-            //     //     isTarget:true,
-            //     //     isSource:true
-            //     // }
-            // });//设置一种默认的端点样式
-            // let EndpointOptions = {
-            //     isTarget:true,
-            //     isSource:true
-            // };//设置一种默认的端点样式
-            //
-            //  firstInstance.importDefaults({
-            //     PaintStyle:{
-            //         strokeWidth:4,
-            //         stroke:"#FFEC54",
-            //         outlineStroke:"#FFBA13",
-            //         outlineWidth:2
-            //     },
-            //     // Connector:[ "Bezier", { curviness: 30 } ],
-            //     Connector:[ "Flowchart"],
-            //     Endpoint:[ "Dot", { radius:5 } ],
-            //     EndpointStyle : { fill: "#FFBA13"  },
-            //     Anchor : [ defaultAnchors ],
-            //     DragOptions: { cursor: 'pointer', zIndex: 2000 },
-            //     // ConnectionOverlays: [
-            //     //     ["Arrow", {
-            //     //         location: 1,
-            //     //         //foldback: 1,
-            //     //         foldback: 0.618, ///0.618： 普通箭头，1：平底箭头，2：钻石箭头
-            //     //         visible: true,
-            //     //         id: "arrow"
-            //     //     }],
-            //     //     ["Label", { location: 0.5, label: "XXX", cssClass: "endpointTargetLabel", visible: true, id: "label" }]
-            //     // ]
-            //     ConnectionOverlays:[
-            //         ["Custom", {
-            //             create:function(component) {
-            //                 return $("<select id='myDropDown'><option value='foo'>foo</option><option value='bar'>bar</option></select>");
-            //             },
-            //             location:0.5,
-            //             id:"customOverlay"
-            //         }]
-            //     ]
-            //     // ConnectionsDetachable:false//禁止拖动连接线
-            // });
-            //
-            //
-            //
-            // firstInstance.setSuspendDrawing(true);
-            // //使组件可拖动
-            // firstInstance.draggable(
-            //     [$('#element1'),$('#element2'),$('#element3')]
-            //     // {grid:[50,50]}
-            // );
-            //
-            // //连接两个组件
-            // // firstInstance.connect({
-            // //     source:"element1",
-            // //     target:"element2"
-            // //     // endpoint:[EndpointOptions]
-            // //     // endpoint:[ "Rectangle", {
-            // //     //     cssClass:"myEndpoint",
-            // //     //     width:3,
-            // //     //     height:1
-            // //     // }]
-            // //     // anchor:"Continuous"
-            // // });
-            //
-            // let endpoint=firstInstance.addEndpoints(["element1","element2","element3"],[{anchor:"Bottom",type:"basic"},{anchor:"Top",type:"basic"}],EndpointOptions);
-            // //失败
-            // // for (let i=0; i<endpoint.length;i++){
-            // //     endpoint[i].bind("mouseover", function(e) {
-            // //         endpoint[i].toggleType("selected");
-            // //     });
-            // //     endpoint[i].bind("mouseout", function(e) {
-            // //         endpoint[i].toggleType("basic");
-            // //     });
-            // // }
-            // firstInstance.selectEndpoints({
-            //     scope:"terminal"
-            // }).toggleType("selected");
-            // //连接时跳出
-            // firstInstance.bind("connection", function(info) {
-            //     console.log("1111");
-            // });
-            // firstInstance.setSuspendDrawing(false, true);
-
         });
+
+    },
+
+    init:function () {
+        //单击删除连接线
+        map.instance.bind("click", function (connection, originalEvent) {
+            if (confirm("删除" + connection.sourceId + " 和 " + connection.targetId + "的连接线?"))
+                map.instance.deleteConnection(connection);
+        });
+
+        map.instance.bind("connection", function (connection, originalEvent) {
+            console.log("connection.sourceId:"+connection.sourceId+",connection.targetId:"+connection.targetId);
+            if (connection.sourceId == connection.targetId) {
+                // map.instance.deleteConnection(connection);
+                console.log("不能连接自己！");
+            }else{
+                console.log("连接"+connection.sourceId+"==="+connection.targetId);
+                //连接两个单元时，显示模态框
+
+                $('#myModal').modal();
+                //设置模态框中两个关联表格的名字
+                $('#myModal .listA').text($('#'+connection.sourceId).text());
+                $('#myModal .listB').text($('#'+connection.targetId).text());
+
+            }
+        });
+
+        //每个建模单元的右上角添加一个小叉叉，用于删除单元
+        $("#myholder").on("mouseenter", ".item", function () {
+            $(this).append('<div class="del"><i class="iconfont">&#xe631;</i></div>');
+            $('#myholder .del').on('click',function () {
+                if (confirm("确定要删除吗?")) {
+                    map.instance.removeAllEndpoints($(this).parent().attr("id"));
+                    $(this).parent().remove();
+                }
+            });
+        });
+        //鼠标从建模单元上移开时，移除右上角小叉叉
+        $("#myholder").on("mouseleave", ".item", function () {
+            $(this).children(".del").remove();
+        });
+
+        // jsPlumb.fire("jsPlumbDemoLoaded", map.instance);
+
+        // //拉出连接线时
+        // map.instance.bind("connectionDrag", function (connection) {
+        //     console.log("connection " + connection.id + " is being dragged." );
+        // });
+        //
+        // //放下拖拽的线时
+        // map.instance.bind("connectionDragStop", function (connection) {
+        //     // $('#myModal').modal();
+        //     console.log("connection " + connection.id + " was dragged");
+        //
+        // });
+        // //连接线改变
+        // map.instance.bind("connectionMoved", function (params) {
+        //     console.log("connection " + params.connection.id + " was moved");
+        // });
 
     }
 };
